@@ -2,15 +2,15 @@
 Navicat MySQL Data Transfer
 
 Source Server         : localhost_mysql
-Source Server Version : 50616
+Source Server Version : 100125
 Source Host           : 127.0.0.1:3306
-Source Database       : db_arnoldus
+Source Database       : db_langit_perizinan
 
 Target Server Type    : MYSQL
-Target Server Version : 50616
+Target Server Version : 100125
 File Encoding         : 65001
 
-Date: 2017-08-01 00:58:33
+Date: 2017-08-23 07:19:51
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -25,21 +25,20 @@ CREATE TABLE `m_employee` (
   `nama` varchar(100) DEFAULT NULL,
   `alamat` varchar(100) DEFAULT NULL,
   `no_telp` varchar(100) DEFAULT NULL,
-  `email` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of m_employee
 -- ----------------------------
-INSERT INTO `m_employee` VALUES ('1', '1001', 'Okki Setyawan', 'Jl.Bintara IX ', '089610595064', 'okkisetyawan@gmail.com');
-INSERT INTO `m_employee` VALUES ('2', '1002', 'Agus Wardianto', 'Jl.Pisangan Baru III', '08975563343', 'agus@mail.com');
-INSERT INTO `m_employee` VALUES ('3', '1003', 'Nanu Mulyono', 'Jl.Kedoya', '089678545499', 'okkisetyawan@gmail.com');
-INSERT INTO `m_employee` VALUES ('4', '1005', 'Doni', 'Jl.Nangka', '089643487966', 'okkisetyawan@gmail.com');
-INSERT INTO `m_employee` VALUES ('5', '1006', 'Arnoldus', 'Jl.Tipar Cakung', '089734526374', 'arnold@mail.com');
-INSERT INTO `m_employee` VALUES ('6', '1007', 'Christin', 'Kelapa Gading Nias', '08934234289', 'pembesarpayudara05@gmail.com');
-INSERT INTO `m_employee` VALUES ('8', '1020', 'yanto chr', 'Jl.Buah Batu', '0896348234000', 'info@abcindo.com');
-INSERT INTO `m_employee` VALUES ('9', '1021', 'Joni ', 'Jl.Arabika', '0896348234000', 'jon@mail.com');
+INSERT INTO `m_employee` VALUES ('1', '1001', 'Okki Setyawan', 'Jl.Bintara IX ', '089610595064');
+INSERT INTO `m_employee` VALUES ('2', '1002', 'Agus Wardianto', 'Jl.Pisangan Baru III', '08975563343');
+INSERT INTO `m_employee` VALUES ('3', '1003', 'Nanu Mulyono', 'Jl.Kedoya', '089678545499');
+INSERT INTO `m_employee` VALUES ('4', '1005', 'Doni', 'Jl.Nangka', '089643487966');
+INSERT INTO `m_employee` VALUES ('5', '1006', 'Arnoldus', 'Jl.Tipar Cakung', '089734526374');
+INSERT INTO `m_employee` VALUES ('6', '1007', 'Christin', 'Kelapa Gading Nias', '08934234289');
+INSERT INTO `m_employee` VALUES ('8', '1020', 'yanto chr', 'Jl.Buah Batu', '0896348234000');
+INSERT INTO `m_employee` VALUES ('9', '1021', 'Joni ', 'Jl.Arabika', '0896348234000');
 
 -- ----------------------------
 -- Table structure for m_goods
@@ -90,22 +89,24 @@ CREATE TABLE `m_user` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `username` varchar(100) DEFAULT NULL,
   `password` varchar(100) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
   `id_pegawai` varchar(100) DEFAULT NULL,
   `level` int(10) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `id_pegawai` (`id_pegawai`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=37 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of m_user
 -- ----------------------------
-INSERT INTO `m_user` VALUES ('24', 'admin', '0cc175b9c0f1b6a831c399e269772661', '2', '1');
-INSERT INTO `m_user` VALUES ('25', 'dono', '0cc175b9c0f1b6a831c399e269772661', '3', '3');
-INSERT INTO `m_user` VALUES ('26', 'nanu', '0cc175b9c0f1b6a831c399e269772661', '4', '4');
-INSERT INTO `m_user` VALUES ('28', 'kasino', '0cc175b9c0f1b6a831c399e269772661', '5', '2');
-INSERT INTO `m_user` VALUES ('30', 'indro', '0cc175b9c0f1b6a831c399e269772661', '1', '5');
-INSERT INTO `m_user` VALUES ('33', 'itin', '0cc175b9c0f1b6a831c399e269772661', '6', '4');
-INSERT INTO `m_user` VALUES ('35', 'joni', '0cc175b9c0f1b6a831c399e269772661', '9', '6');
+INSERT INTO `m_user` VALUES ('24', 'admin', '0cc175b9c0f1b6a831c399e269772661', null, '2', '1');
+INSERT INTO `m_user` VALUES ('25', 'dono', '0cc175b9c0f1b6a831c399e269772661', null, '3', '3');
+INSERT INTO `m_user` VALUES ('26', 'nanu', '0cc175b9c0f1b6a831c399e269772661', null, '4', '4');
+INSERT INTO `m_user` VALUES ('28', 'kasino', '0cc175b9c0f1b6a831c399e269772661', null, '5', '2');
+INSERT INTO `m_user` VALUES ('30', 'indro', '0cc175b9c0f1b6a831c399e269772661', null, '1', '5');
+INSERT INTO `m_user` VALUES ('33', 'itin', '0cc175b9c0f1b6a831c399e269772661', null, '6', '4');
+INSERT INTO `m_user` VALUES ('35', 'joni', '0cc175b9c0f1b6a831c399e269772661', null, '9', '6');
+INSERT INTO `m_user` VALUES ('36', 'karlina', '90cc39e5c2a2a179bde07080c440e156', 'okkisetyawan@gmail.com', '11', '1');
 
 -- ----------------------------
 -- Table structure for t_rec_goods

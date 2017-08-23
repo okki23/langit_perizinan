@@ -60,7 +60,7 @@
 				<!-- begin mobile sidebar expand / collapse button -->
 				<div class="navbar-header">
 					<!-- C:\xampp\htdocs\s_arnold\assets\img -->
-	<img src="<?php echo base_url('assets/img/mylogo.png');?>" style="width:200px; height:70px;">
+	<img src="<?php echo base_url('assets/img/langit.png');?>" style="width:150px; height:70px;">
 
 					<button type="button" class="navbar-toggle" data-click="sidebar-toggled">
 						<span class="icon-bar"></span>
@@ -98,8 +98,7 @@
 			<!-- begin sidebar scrollbar -->
 			<div data-scrollbar="true" data-height="100%">
 				<!-- begin sidebar user -->
-					<?php if($user_group == 'SUPERADMIN') {
-					?>
+			 
 				<ul class="nav">
 					<div style="margin-top:10px;"> &nbsp; </div>
 					<li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-institution alias"></i> <span>Dashboard</span></a></li>
@@ -110,167 +109,16 @@
 						    <span>Master</span>
 					    </a>
 						<ul class="sub-menu">
-						    <li><a href="<?php echo base_url('pegawai'); ?>">Pegawai</a></li>
-						    <li><a href="<?php echo base_url('supplier'); ?>">Supplier</a></li>
-								<li><a href="<?php echo base_url('goods'); ?>">Bahan Baku</a></li>
+                                                    <li><a href="<?php echo base_url('pegawai'); ?>">Pegawai</a>
 						    <li><a href="<?php echo base_url('user'); ?>">User</a></li>
 						</ul>
 					</li>
-					<li class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-laptop"></i>
-						    <span>Transaksi</span>
-					    </a>
-						<ul class="sub-menu">
-						    <li><a href="<?php echo base_url('req_goods'); ?>">Request Bahan Baku</a></li>
-						    <li><a href="<?php echo base_url('rec_goods'); ?>">Receive Bahan Baku</a></li>
-								<li><a href="<?php echo base_url('using_goods'); ?>">Penggunaan Bahan Baku</a></li>
-						    <li><a href="<?php echo base_url('res_goods'); ?>">Hasil Pengolahan Bahan Baku</a></li>
-						</ul>
-					</li>
-					<li class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-laptop"></i>
-						    <span>Laporan</span>
-					    </a>
-						<ul class="sub-menu">
-						    <li><a href="<?php echo base_url('rep_using_goods'); ?>">Penggunaan Bahan Baku</a></li>
-						    <li><a href="<?php echo base_url('rep_result_goods'); ?>">Hasil Pengolahan Bahan Baku</a></li>
-						</ul>
-					</li>
-
-
-					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
-
-				</ul>
-				<?php
-			}else if($user_group == 'PPIC'){
-				?>
-				<ul class="nav">
-					<div style="margin-top:10px;"> &nbsp; </div>
-					<li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-institution alias"></i> <span>Dashboard</span></a></li>
-
-					<li class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-laptop"></i>
-						    <span>Transaksi</span>
-					    </a>
-						<ul class="sub-menu">
-						    <li><a href="<?php echo base_url('req_goods'); ?>">Request Bahan Baku</a></li>
-
-						</ul>
-					</li>
-
-
-
-					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
-
-				</ul>
-				<?php
-			  }else if($user_group == 'PURCHASING'){
-				?>
-				<ul class="nav">
-					<div style="margin-top:10px;"> &nbsp; </div>
-					<li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-institution alias"></i> <span>Dashboard</span></a></li>
-
-					<li class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-laptop"></i>
-						    <span>Transaksi</span>
-					    </a>
-						<ul class="sub-menu">
-						    <li><a href="<?php echo base_url('req_goods'); ?>">Request Bahan Baku</a></li>
-
-						</ul>
-					</li>
-
-					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
-
-				</ul>
-				<?php
-			  }else if($user_group == 'ADMIN WAREHOUSE'){
-				?>
-				<ul class="nav">
-					<div style="margin-top:10px;"> &nbsp; </div>
-					<li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-institution alias"></i> <span>Dashboard</span></a></li>
-
-					<li class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-laptop"></i>
-						    <span>Transaksi</span>
-					    </a>
-						<ul class="sub-menu">
-
-						    <li><a href="<?php echo base_url('rec_goods'); ?>">Receive Bahan Baku</a></li>
-
-						</ul>
-					</li>
-
-
-					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
-
-				</ul>
-				<?php
-				}else if($user_group == 'ADMIN PRODUKSI'){
-				?>
-
-				<ul class="nav">
-					<div style="margin-top:10px;"> &nbsp; </div>
-					<li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-institution alias"></i> <span>Dashboard</span></a></li>
-
-					<li class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-laptop"></i>
-						    <span>Transaksi</span>
-					    </a>
-						<ul class="sub-menu">
-
-								<li><a href="<?php echo base_url('using_goods'); ?>">Penggunaan Bahan Baku</a></li>
-						    <li><a href="<?php echo base_url('res_goods'); ?>">Hasil Pengolahan Bahan Baku</a></li>
-						</ul>
-					</li>
-
-
-
-					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
-
-				</ul>
-				<?php
-			  }else if($user_group == 'SUPERVISOR'){
-				?>
-				<ul class="nav">
-					<div style="margin-top:10px;"> &nbsp; </div>
-					<li><a href="<?php echo base_url('dashboard'); ?>"><i class="fa fa-institution alias"></i> <span>Dashboard</span></a></li>
 					 
-					<li class="has-sub">
-						<a href="javascript:;">
-						    <b class="caret pull-right"></b>
-						    <i class="fa fa-laptop"></i>
-						    <span>Laporan</span>
-					    </a>
-						<ul class="sub-menu">
-						    <li><a href="<?php echo base_url('rep_using_goods'); ?>">Penggunaan Bahan Baku</a></li>
-						    <li><a href="<?php echo base_url('rep_result_goods'); ?>">Hasil Pengolahan Bahan Baku</a></li>
-						</ul>
-					</li>
-
 
 					<li><a href="javascript:;" class="sidebar-minify-btn" data-click="sidebar-minify"><i class="fa fa-angle-double-left"></i></a></li>
 
 				</ul>
-
-				<?php
-				}
-				 ?>
-
-
-
+				 
 			</div>
 
 		</div>

@@ -21,6 +21,36 @@ class Login extends Parent_controller {
         $data['judul'] = 'Program Aplikasi Pengolahan Ayam pada PT.Sun One';
         $this->load->view('login/login_view', $data);
     }
+    
+    public function forgot_pass() {
+        $data['judul'] = 'Program Aplikasi Pengolahan Ayam pada PT.Sun One';
+        $this->load->view('login/forgot_pass_view', $data);
+    }
+    
+     public function forgot_pass_pro() {
+         
+         $email = $this->input->post('email');
+         $username = $this->input->post('username');
+         
+         $default_pass = 'langit2017';
+         $cdefault_pass = md5($default_pass);
+         $this->load->library('email');
+         
+          $this->email->to($email);
+          $this->email->from('no_rep@langitinfotama.net');
+          $this->email->subject('Reset Password');
+          $this->email->message('Hello user ! <br> This is your new password : '.$default_pass);
+          $this->email->send();
+          $this->email->clear();
+          
+          $updatepass = $this->db->query("update m_user set password = '$cdefault_pass' where username = '$username' and email = '$email' ");
+          if($updatepass){
+                echo "<script language=javascript>
+                alert('Password Telah Di Reset,silahkan cek email anda untuk melihat password baru !');
+                window.location='" . base_url('login') . "';
+                </script>";
+          }
+    }
 
     public function auth(){
       $datapos = array('username'=>$this->input->post('username'),

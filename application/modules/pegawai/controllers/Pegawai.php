@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Pegawai extends Parent_controller {
 
-  var $parsing_form_input = array('id','nik','nama','alamat','no_telp','email');
+  var $parsing_form_input = array('id','nik','nama','alamat','no_telp');
   var $tablename = 'm_employee';
 
     public function __construct() {

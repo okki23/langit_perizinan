@@ -40,13 +40,17 @@
 
             <div class="login-header">
                 <div class="brand" align="center">
-                <img src="<?php echo base_url('assets/img/mylogo.png');?>" style="width:300px; height:100px;">
+                    
+                <img src="<?php echo base_url('assets/img/langit.png');?>" style="width:300px; height:150px;">
 
                 </div>
 
             </div>
+            <br>
+           
             <!-- end brand -->
             <div class="login-content">
+                 <h4 align="center"> SISTEM APLIKASI IZIN DAN TUGAS BELAJAR KEMENTERIAN XXX  </h4>
                 <form action="<?php echo base_url('login/auth'); ?>" method="POST" class="margin-bottom-0">
                     <div class="form-group m-b-20">
                         <input type="text" name="username" class="form-control input-lg" placeholder="Username" />
@@ -56,6 +60,9 @@
                     </div>
 
                     <div class="login-buttons">
+                        <a href="<?php echo base_url('login/forgot_pass'); ?>" > Forgot Password ?</a>
+                        <br>
+                        &nbsp;
                         <button type="submit" class="btn btn-success btn-block btn-lg">Login</button>
                     </div>
                 </form>

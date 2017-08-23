@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class User extends Parent_controller {
 
-  var $parsing_form_input = array('id','username','password','id_pegawai','level');
+  var $parsing_form_input = array('id','username','password','email','id_pegawai','level');
   var $tablename = 'm_user';
 
     public function __construct() {
@@ -46,6 +46,7 @@ class User extends Parent_controller {
 
           $data['opt_pegawai'] = $this->m_umanagement->opt_pegawai();
           $data['parse_view'] = 'user/user_store';
+          $data['judul'] = $this->data['judul'];
           //session
           $data['username'] = $this->session->userdata('username');
           $data['user_group'] = strtoupper(level_help($this->session->userdata('user_group')));

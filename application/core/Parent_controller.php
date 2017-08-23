@@ -5,8 +5,8 @@ class Parent_controller extends CI_Controller {
 
 		public function __construct(){
 			  parent::__construct();
-				$this->data['judul'] = 'Program Aplikasi Pengolahan Ayam pada PT.Sun One';
-				$this->load->helper('sunone');
+				$this->data['judul'] = 'SISTEM APLIKASI IZIN DAN TUGAS BELAJAR KEMENTERIAN XXX';
+				$this->load->helper('langit');
 				/*
 				session list - role access
 				1.superadmin = all menu, all master

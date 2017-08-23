@@ -13,7 +13,7 @@
         $config['smtp_port']='465';
         $config['smtp_timeout']='30';
         $config['smtp_user']='okkisetyawan@gmail.com';
-        $config['smtp_pass']='Injector_93'; 
+        $config['smtp_pass']='Katerban_93'; 
         $config['charset']='utf-8';
         $config['newline']="\r\n";
 
